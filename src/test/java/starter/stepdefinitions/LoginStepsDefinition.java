@@ -1,12 +1,15 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import org.jetbrains.annotations.NotNull;
+import org.openqa.selenium.devtools.v85.browser.Browser;
 import starter.login.Login;
 import starter.navigation.NavigateTo;
 import starter.pages.BStackHomePage;
@@ -28,8 +31,8 @@ public class LoginStepsDefinition {
 
     // Valid login steps
     @And("{actor} goes to sign in with his credentials username {string} and password {string}")
-    public void heGoesToSignInWithHisCredentials(Actor actor, String username, String password) {
-        actor.attemptsTo(Login.with(username, password));
+    public void heGoesToSignInWithHisCredentials(Actor actor, String user, String pass) {
+        actor.attemptsTo(Login.with(user, pass));
     }
 
     @Then("{actor} should successfully log in to {string}")
@@ -42,12 +45,9 @@ public class LoginStepsDefinition {
     public void heGoesToSignInWithWrongCredentials(Actor actor, String username, String password) {
         actor.attemptsTo(Login.with(username, password));
     }
+
     @Then("{actor} should see an invalid credentials error")
     public void heShouldSeeAnInvalidCredentialsError(Actor actor) {
         actor.attemptsTo(Ensure.that(LoginPage.INVALIDLOGIN).isDisplayed());
     }
-
-
-
-
 }
