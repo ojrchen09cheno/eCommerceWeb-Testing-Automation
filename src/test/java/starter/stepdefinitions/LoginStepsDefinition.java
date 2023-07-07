@@ -1,18 +1,14 @@
 package starter.stepdefinitions;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import org.jetbrains.annotations.NotNull;
-import org.openqa.selenium.devtools.v85.browser.Browser;
 import starter.login.Login;
 import starter.navigation.NavigateTo;
-import starter.pages.BStackHomePage;
+
 import starter.pages.HomePageSignedIn;
 import starter.pages.LoginPage;
 

@@ -3,11 +3,8 @@ package starter.navigation;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.ClickOnTarget;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.waits.Wait;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import net.serenitybdd.screenplay.waits.WaitUntilTargetIsReady;
 import starter.pages.BStackHomePage;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
